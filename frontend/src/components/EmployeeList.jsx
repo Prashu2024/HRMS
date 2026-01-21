@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { employeeAPI } from '../api';
 import { Users, Trash2, Plus, Calendar, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import EmployeeForm from './EmployeeForm';
@@ -194,13 +195,13 @@ const EmployeeList = () => {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                       <div className="flex gap-2">
-                        <button
-                          onClick={() => window.location.href = `/attendance/${employee.employee_id}`}
+                        <Link
+                          to={`/attendance/${employee.employee_id}`}
                           className="text-blue-600 hover:text-blue-800 flex items-center gap-1"
                           title="View Attendance"
                         >
                           <Calendar size={16} />
-                        </button>
+                        </Link>
                         <button
                           onClick={() => handleDeleteEmployee(employee.employee_id)}
                           className="text-red-600 hover:text-red-800"
