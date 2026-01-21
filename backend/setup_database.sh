@@ -6,11 +6,11 @@
 echo "🚀 Setting up PostgreSQL database for HRMS Lite..."
 
 # Database configuration
-DB_NAME="hrms_db"
+DB_NAME="railway"
 DB_USER="postgres"
-DB_PASSWORD="postgres"
-DB_HOST="localhost"
-DB_PORT="5432"
+DB_PASSWORD="oVKIlwEyjxwfMwytctnCgECTIQFYnfQK"
+DB_HOST="trolley.proxy.rlwy.net"
+DB_PORT="57116"
 
 echo "📋 Database Configuration:"
 echo "  Database Name: $DB_NAME"
