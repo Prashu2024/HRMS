@@ -8,6 +8,7 @@ const api = axios.create({
     'Content-Type': 'application/json',
   },
 });
+console.log("API BASE URL:", import.meta.env.VITE_API_BASE_URL);
 
 export const employeeAPI = {
   getAll: (skip = 0, limit = 10, search = null) => {
