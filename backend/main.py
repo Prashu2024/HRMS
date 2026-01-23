@@ -15,11 +15,11 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="HRMS Lite API", version="1.0.0")
 
 # Get CORS origins from environment variable
-cors_origins = os.getenv("CORS_ORIGINS", '["http://localhost:5173"]')
+cors_origins = os.getenv("CORS_ORIGINS", '["http://localhost:5173","https://hrms-lemon-one.vercel.app"]')
 try:
     allowed_origins = ast.literal_eval(cors_origins)
 except (ValueError, SyntaxError):
-    allowed_origins = ["http://localhost:5173"]
+    allowed_origins = ["http://localhost:5173","https://hrms-lemon-one.vercel.app"]
 
 app.add_middleware(
     CORSMiddleware,
