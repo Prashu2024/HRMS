@@ -20,7 +20,7 @@ try:
     allowed_origins = ast.literal_eval(cors_origins)
 except (ValueError, SyntaxError):
     allowed_origins = ["http://localhost:5173","https://hrms-lemon-one.vercel.app"]
-
+print(allowed_origins)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
