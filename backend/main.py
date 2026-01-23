@@ -23,7 +23,7 @@ except (ValueError, SyntaxError):
 print(allowed_origins)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,
+    allow_origins=["*"],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
